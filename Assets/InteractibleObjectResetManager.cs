@@ -26,9 +26,14 @@ public class InteractibleObjectResetManager : GenericSingletonClass<Interactible
 
     public void Reset()
     {
+        foreach (var keyManager in FindObjectsOfType<KeyManager>())
+        {
+            keyManager.CurrentKey = KeyManager.Key.None;
+        }
+
         foreach (var spawnedInteractible in FindObjectsOfType<Interactible>())
         {
-            Destroy(spawnedInteractible.gameObject);
+            Destroy(spawnedInteractible.transform.root.gameObject);
         }
 
         for (int i = 0; i < InteractibleObjectPositons.Count; i++)

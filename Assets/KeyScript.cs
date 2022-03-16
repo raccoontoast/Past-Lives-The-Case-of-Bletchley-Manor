@@ -17,7 +17,7 @@ public class KeyScript : Interactible
 
     public override void Interact(GameObject interacter)
     {
-        KeyManager km = FindObjectOfType<KeyManager>();
+        KeyManager km = interacter.GetComponent<KeyManager>();
 
         if (IsPickupable)
         {

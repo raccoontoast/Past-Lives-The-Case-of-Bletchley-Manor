@@ -71,7 +71,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                GetComponent<PlayerActions>().TryInteract(Camera.main.transform);
+                GetComponent<PlayerActions>().TryInteract(transform.Find("Camera"));
                 GetComponent<PlayerMovementRecorder>().CurrentInteraction = RecordInfo.Interaction.Action;
             }
 
