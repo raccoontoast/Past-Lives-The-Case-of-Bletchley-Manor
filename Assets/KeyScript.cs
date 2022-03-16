@@ -15,13 +15,21 @@ public class KeyScript : Interactible
         origRotation = transform.rotation;
     }
 
-    public override void Interact()
+    public override void Interact(GameObject interacter)
     {
+        KeyManager km = FindObjectOfType<KeyManager>();
+
         if (IsPickupable)
         {
+            // Check if already holding a key, and if so throw the key before picking up
+            if (km.CurrentKey != KeyManager.Key.None)
+            {
+                km.ThrowKey(interacter.transform.position, interacter.transform.Find("Camera").transform);
+            }
+
             // Pick up the key;
-            Destroy(gameObject);
-            FindObjectOfType<KeyManager>().CurrentKey = thisKey;
+            Destroy(transform.root.gameObject);
+            km.CurrentKey = thisKey;
         }
     }    
 

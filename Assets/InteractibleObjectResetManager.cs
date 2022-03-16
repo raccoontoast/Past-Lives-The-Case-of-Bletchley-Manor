@@ -5,13 +5,22 @@ public class InteractibleObjectResetManager : GenericSingletonClass<Interactible
 {
     public List<InteractibleObjectSpawnLocation> InteractibleObjectSpawnLocations;
 
+    Interactible[] InteractibleObjects;
+    List<Vector3> InteractibleObjectPositons = new List<Vector3>();
+    List<string> InteractibleObjectNames = new List<string>();
+    List<Quaternion> InteractibleObjectRotations = new List<Quaternion>();
+
     public override void Awake()
     {
         base.Awake();
 
-        foreach (var interactibleObjectSpawnLocation in InteractibleObjectSpawnLocations)
+        InteractibleObjects = FindObjectsOfType<Interactible>();
+
+        foreach (var interactible in InteractibleObjects)
         {
-            Instantiate(interactibleObjectSpawnLocation.GameObject, interactibleObjectSpawnLocation.transform.position, Quaternion.identity);
+            InteractibleObjectPositons.Add(interactible.transform.position);
+            InteractibleObjectNames.Add(interactible.transform.root.name);
+            InteractibleObjectRotations.Add(interactible.transform.rotation);
         }
     }
 
@@ -22,9 +31,9 @@ public class InteractibleObjectResetManager : GenericSingletonClass<Interactible
             Destroy(spawnedInteractible.gameObject);
         }
 
-        foreach (var interactibleObjectSpawnLocation in InteractibleObjectSpawnLocations)
+        for (int i = 0; i < InteractibleObjectPositons.Count; i++)
         {
-            Instantiate(interactibleObjectSpawnLocation.GameObject, interactibleObjectSpawnLocation.transform.position, Quaternion.identity);
+            Instantiate(Resources.Load("Interactibles/" + InteractibleObjectNames[i]), InteractibleObjectPositons[i], InteractibleObjectRotations[i]);
         }
     }
 }

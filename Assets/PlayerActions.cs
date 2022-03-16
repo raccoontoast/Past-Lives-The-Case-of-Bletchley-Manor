@@ -16,7 +16,7 @@ public class PlayerActions : MonoBehaviour
             if (hitInfo.collider.TryGetComponent(out Interactible interactible))
             {
                 Debug.Log("Viewed object is interactible.");
-                interactible.Interact();
+                interactible.Interact(gameObject);
             }
         }
     }
