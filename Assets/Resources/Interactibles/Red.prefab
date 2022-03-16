@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84429925565286454}
-  - component: {fileID: 1375903386849995134}
-  - component: {fileID: 5222922240176302329}
+  - component: {fileID: 2717871258938295501}
+  - component: {fileID: 588376927669694785}
   m_Layer: 6
   m_Name: Red
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!65 &1375903386849995134
+--- !u!65 &2717871258938295501
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22771017, y: 0.017118827, z: 0.08233309}
   m_Center: {x: 0.06775285, y: -0.0005179383, z: -0.0005444363}
---- !u!54 &5222922240176302329
+--- !u!54 &588376927669694785
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,7 +55,7 @@ Rigidbody:
   m_GameObject: {fileID: 747637384485212812}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.1
+  m_Drag: 0.05
   m_AngularDrag: 1.25
   m_UseGravity: 1
   m_IsKinematic: 1

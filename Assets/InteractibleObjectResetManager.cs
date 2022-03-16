@@ -29,6 +29,7 @@ public class InteractibleObjectResetManager : GenericSingletonClass<Interactible
         foreach (var keyManager in FindObjectsOfType<KeyManager>())
         {
             keyManager.CurrentKey = KeyManager.Key.None;
+            keyManager.KeyFPSViewGO.SetActive(false);
         }
 
         foreach (var spawnedInteractible in FindObjectsOfType<Interactible>())

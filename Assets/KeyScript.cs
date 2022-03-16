@@ -27,7 +27,9 @@ public class KeyScript : Interactible
                 km.ThrowKey(interacter.transform.position, interacter.transform.Find("Camera").transform);
             }
 
-            // Pick up the key;
+            // Pick up the key.
+            km.KeyFPSViewGO.SetActive(true);
+            km.KeyFPSViewGO.GetComponentInChildren<Renderer>().material.color = GetComponent<Renderer>().material.color;
             Destroy(transform.root.gameObject);
             km.CurrentKey = thisKey;
         }
