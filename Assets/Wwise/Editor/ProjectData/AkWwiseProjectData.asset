@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 06e174b9eea12242a4243788f476cbff
     GuidInternal: 
-    m_lastTime: -8585539657174775808
+    m_lastTime: -8585539200893111763
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -319,20 +319,6 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
-    - name: Motion Factory Bus
-      guid: c6b9f92af16ee946b5f2e30c9e602c74
-      id: 985987111
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 06e174b9eea12242a4243788f476cbff
-      - ElementName: Motion Factory Bus
-        ObjectType: 2
-        guid: c6b9f92af16ee946b5f2e30c9e602c74
-      Path: Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -358,7 +344,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Music
     guid: 547fad4d66a6ce4386b84d4d3cea9adf
     GuidInternal: 
-    m_lastTime: -8585539657174775808
+    m_lastTime: -8585539197335049004
     List:
     - name: Music
       guid: a64922964832b043bee65fd35156f660
@@ -386,7 +372,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 62cf48e79a93254f9cef46c7038b7d9d
     GuidInternal: 
-    m_lastTime: -8585539657174775808
+    m_lastTime: -8585539191294237232
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -399,7 +385,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 8fc7ec522af07d428de67e05927c6f6f
     GuidInternal: 
-    m_lastTime: -8585539657174775808
+    m_lastTime: -8585539191294133472
     List:
     - name: Exploring
       guid: 046eb251c4e8224a881eb4e6c37b9802
@@ -416,8 +402,8 @@ MonoBehaviour:
         guid: 046eb251c4e8224a881eb4e6c37b9802
       Path: Events\Music\Exploring
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: In_Game
       guid: 12dc96fbfb45934780ebd7e052688a35
       id: 2967546505
@@ -433,8 +419,8 @@ MonoBehaviour:
         guid: 12dc96fbfb45934780ebd7e052688a35
       Path: Events\Music\In_Game
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Music
       guid: 61ee14f5abeac84c81e07a685c5ae02a
       id: 3991942870
@@ -467,8 +453,8 @@ MonoBehaviour:
         guid: d5b145c256faf34aa69b5b6f48a65ad6
       Path: Events\Music\Puzzle_Success
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Puzzling
       guid: bb7e33dbbbe1504ab2c52807c231ad00
       id: 346692864
@@ -484,8 +470,42 @@ MonoBehaviour:
         guid: bb7e33dbbbe1504ab2c52807c231ad00
       Path: Events\Music\Puzzling
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
+    - name: Trigger_Key_Pickup
+      guid: 58e59c115f0ee644847284c74bb41717
+      id: 1983107610
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 8fc7ec522af07d428de67e05927c6f6f
+      - ElementName: Trigger_Key_Pickup
+        ObjectType: 3
+        guid: 58e59c115f0ee644847284c74bb41717
+      Path: Events\Music\Trigger_Key_Pickup
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Trigger_Life_Change
+      guid: 847ed3066701df4e9d95f41f9625b778
+      id: 442340631
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 8fc7ec522af07d428de67e05927c6f6f
+      - ElementName: Trigger_Life_Change
+        ObjectType: 3
+        guid: 847ed3066701df4e9d95f41f9625b778
+      Path: Events\Music\Trigger_Life_Change
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -992,7 +1012,7 @@ MonoBehaviour:
         guid: 681b01097e91cc4bbb17657804da8c84
       Path: Triggers\Music\Puzzle_Success
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000900000012000000130000001400000015000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
