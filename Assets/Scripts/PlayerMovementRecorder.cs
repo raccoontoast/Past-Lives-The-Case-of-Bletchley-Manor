@@ -108,5 +108,8 @@ public class PlayerMovementRecorder : MonoBehaviour
 
         // Now teleport player to second level
         StartCoroutine(TeleportPlayer());
+
+        // Audio
+        AudioManager.Instance.ChangeLifeEvent.Post(AudioManager.Instance.gameObject);
     }
 }

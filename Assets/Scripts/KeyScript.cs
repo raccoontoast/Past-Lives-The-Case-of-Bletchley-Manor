@@ -37,6 +37,8 @@ public class KeyScript : Interactible
             
             Destroy(transform.root.gameObject);
             km.CurrentKey = thisKey;
+
+            AudioManager.Instance.KeyPickupEvent.Post(AudioManager.Instance.gameObject);
         }
     }    
 
