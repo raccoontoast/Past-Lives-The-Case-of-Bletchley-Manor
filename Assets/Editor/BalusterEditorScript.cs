@@ -12,6 +12,7 @@ public class BalusterEditorScript : EditorWindow
     private int _intermediaryBanistersAmount;
     private GameObject _balusterPrefab = null;
     private List<GameObject> _balusterList;
+    private Material _handrailMaterial;
 
     [MenuItem("Custom Editor/Banisters")]
     public static void CustomEditorWindow()
@@ -23,9 +24,10 @@ public class BalusterEditorScript : EditorWindow
     {
         _intermediaryBanistersAmount = EditorGUI.IntField(new Rect(3, 3, position.width, 20), "Intermediary Banisters", _intermediaryBanistersAmount);
         _balusterPrefab = (GameObject)EditorGUI.ObjectField(new Rect(3, 23, position.width, 20), "Baluster Prefab", _balusterPrefab, typeof(GameObject), true);
-        
+        _handrailMaterial = (Material)EditorGUI.ObjectField(new Rect(3, 43, position.width, 20), "Handrail Texture", _handrailMaterial, typeof(Material), true);
 
-        GUILayout.Space(50f);
+
+        GUILayout.Space(75f);
         if (GUILayout.Button("Generate Banisters"))
         {
             foreach (var GO in Selection.gameObjects)
@@ -71,6 +73,26 @@ public class BalusterEditorScript : EditorWindow
                     if (toBeDestroyed != null)
                     {
                         DestroyImmediate(toBeDestroyed.gameObject);
+                    }
+                }
+            }
+        }
+
+        GUILayout.Space(25f);
+        if (GUILayout.Button("Apply Handrail Material"))
+        {
+            foreach (var GO in Selection.gameObjects)
+            {
+                int childCount = GO.transform.childCount;
+
+                for (int i = 0; i < childCount; i++)
+                {
+                    Transform toHaveMaterialApplied = GO.transform.Find("Handrail");
+
+                    if (toHaveMaterialApplied != null)
+                    {
+                        toHaveMaterialApplied.GetComponent<Renderer>().material = _handrailMaterial;
+                        toHaveMaterialApplied.name += "withMaterial";
                     }
                 }
             }
