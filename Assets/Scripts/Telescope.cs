@@ -46,7 +46,7 @@ public class Telescope : Interactible
 
                 foreach (var pathSegmentRenderer in HiddenPath.GetComponentsInChildren<Renderer>())
                 {
-                    pathSegmentRenderer.enabled = false;
+                    //pathSegmentRenderer.enabled = false;
                 }
             }
         }
