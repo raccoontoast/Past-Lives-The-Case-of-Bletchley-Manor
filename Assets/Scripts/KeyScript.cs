@@ -39,7 +39,7 @@ public class KeyScript : Interactible
             km.CurrentKey = thisKey;
 
             // Audio
-            AudioManager.Instance.KeyPickupEvent.Post(AudioManager.Instance.gameObject);
+            //AudioManager.Instance.KeyPickupEvent.Post(AudioManager.Instance.gameObject);
         }
     }    
 

@@ -110,6 +110,6 @@ public class PlayerMovementRecorder : MonoBehaviour
         StartCoroutine(TeleportPlayer());
 
         // Audio
-        AudioManager.Instance.ChangeLifeEvent.Post(AudioManager.Instance.gameObject);
+        //AudioManager.Instance.ChangeLifeEvent.Post(AudioManager.Instance.gameObject);
     }
 }
