@@ -30,13 +30,16 @@ public class KeyScript : Interactible
             // Pick up the key.
             km.KeyFPSViewGO.SetActive(true);
             km.KeyFPSViewGO.GetComponentInChildren<Renderer>().material.color = GetComponent<Renderer>().material.color;
-            foreach (var light in km.GetComponentsInChildren<Light>())
+            foreach (var light in km.KeyFPSViewGO.GetComponentsInChildren<Light>())
             {
                 light.color = GetComponent<Renderer>().material.color;
             }
             
             Destroy(transform.root.gameObject);
             km.CurrentKey = thisKey;
+
+            // Audio
+            AudioManager.Instance.KeyPickupEvent.Post(AudioManager.Instance.gameObject);
         }
     }    
 

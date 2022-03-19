@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec6a242102848b48a866b7e4a0c61b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResetOnLifeSwap: 1
   thisKey: 0
   IsPickupable: 1
 --- !u!1 &3110894141890955420

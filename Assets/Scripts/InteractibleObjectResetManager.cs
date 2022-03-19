@@ -18,9 +18,12 @@ public class InteractibleObjectResetManager : GenericSingletonClass<Interactible
 
         foreach (var interactible in InteractibleObjects)
         {
-            InteractibleObjectPositons.Add(interactible.transform.position);
-            InteractibleObjectNames.Add(interactible.transform.root.name);
-            InteractibleObjectRotations.Add(interactible.transform.rotation);
+            if (interactible.ResetOnLifeSwap)
+            {
+                InteractibleObjectPositons.Add(interactible.transform.position);
+                InteractibleObjectNames.Add(interactible.transform.root.name);
+                InteractibleObjectRotations.Add(interactible.transform.rotation);
+            }
         }
     }
 
@@ -34,7 +37,10 @@ public class InteractibleObjectResetManager : GenericSingletonClass<Interactible
 
         foreach (var spawnedInteractible in FindObjectsOfType<Interactible>())
         {
-            Destroy(spawnedInteractible.transform.root.gameObject);
+            if (spawnedInteractible.ResetOnLifeSwap)
+            {
+                Destroy(spawnedInteractible.transform.root.gameObject);
+            }
         }
 
         for (int i = 0; i < InteractibleObjectPositons.Count; i++)

@@ -63,7 +63,7 @@ public class PlayerMovementRecorder : MonoBehaviour
 
     private void Update()
     {
-        // Testing
+        // Testing TODO: Put this somewhere more sensical.
         if (Input.GetKeyDown(KeyCode.F))
         {
             InstantiatePlayerClone();
@@ -73,7 +73,7 @@ public class PlayerMovementRecorder : MonoBehaviour
         }
     }
 
-    void InstantiatePlayerClone()   
+    void InstantiatePlayerClone()    // TODO: Better name?
     {
         // Find the spawn point in the room which the player currently isn't in
         Transform PlayerSpawnTransform = transform; // Has to be instantiated?
@@ -108,5 +108,8 @@ public class PlayerMovementRecorder : MonoBehaviour
 
         // Now teleport player to second level
         StartCoroutine(TeleportPlayer());
+
+        // Audio
+        AudioManager.Instance.ChangeLifeEvent.Post(AudioManager.Instance.gameObject);
     }
 }
