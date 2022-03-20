@@ -18,8 +18,5 @@ public class AudioManager : GenericSingletonClass<AudioManager>
     private void Start()
     {
         MusicStartEvent.Post(gameObject);
-
-        // For now until I add menu.
-        ExploringEvent.Post(gameObject);
     }
 }

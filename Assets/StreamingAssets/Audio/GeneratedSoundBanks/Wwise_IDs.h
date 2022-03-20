@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PUZZLE_SUCCESS = 2687737065U;
         static const AkUniqueID PUZZLING = 346692864U;
+        static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID TRIGGER_KEY_PICKUP = 1983107610U;
         static const AkUniqueID TRIGGER_LIFE_CHANGE = 442340631U;
     } // namespace EVENTS

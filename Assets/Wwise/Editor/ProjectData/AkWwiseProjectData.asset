@@ -385,7 +385,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 8fc7ec522af07d428de67e05927c6f6f
     GuidInternal: 
-    m_lastTime: -8585539191294133472
+    m_lastTime: -8585538350596850216
     List:
     - name: Exploring
       guid: 046eb251c4e8224a881eb4e6c37b9802
@@ -469,6 +469,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: bb7e33dbbbe1504ab2c52807c231ad00
       Path: Events\Music\Puzzling
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Music
+      guid: d3b2be6464796c45830612d990176f0c
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 8fc7ec522af07d428de67e05927c6f6f
+      - ElementName: Stop_Music
+        ObjectType: 3
+        guid: d3b2be6464796c45830612d990176f0c
+      Path: Events\Music\Stop_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
