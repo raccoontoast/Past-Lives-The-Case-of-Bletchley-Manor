@@ -21,7 +21,10 @@ public class CloneMovementPlayback : MonoBehaviour
         switch (RecInfo.ActionList[currentReplayIndex])
         {
             case RecordInfo.Interaction.Action:
-                GetComponent<PlayerActions>().TryInteract(transform.Find("Camera"));
+                if (TryGetComponent(out PlayerActions playerActions))
+                {
+                    GetComponent<PlayerActions>().TryInteract(transform.Find("Camera"));
+                }
                 break;
             case RecordInfo.Interaction.Fire:
                 GetComponent<KeyManager>().ThrowKey(transform.position, transform.Find("Camera"));

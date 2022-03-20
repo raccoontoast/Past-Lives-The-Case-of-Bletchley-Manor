@@ -1,3 +1,5 @@
+#if UNITY_EDITOR
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProBuilder;
@@ -131,3 +133,5 @@ public class BanisterGenerator : MonoBehaviour
         return finalBanisterGOs;
     }
 }
+
+#endif

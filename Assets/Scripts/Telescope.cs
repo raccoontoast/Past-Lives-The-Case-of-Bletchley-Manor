@@ -17,6 +17,9 @@ public class Telescope : Interactible
 
     public override void Interact(GameObject Interacter)
     {
+        if (Interacter.GetComponent<FirstPersonController>() == null)
+            return;
+
         Interacter.GetComponent<FirstPersonController>().enabled = PlayerIsUsingTelescope;
         Interacter.GetComponentInChildren<Camera>().enabled = PlayerIsUsingTelescope;
         TelescopeCameraRig.SetActive(!PlayerIsUsingTelescope);

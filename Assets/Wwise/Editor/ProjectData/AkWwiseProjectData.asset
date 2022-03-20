@@ -372,7 +372,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 62cf48e79a93254f9cef46c7038b7d9d
     GuidInternal: 
-    m_lastTime: -8585539191294237232
+    m_lastTime: -8585538043486814620
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -385,7 +385,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 8fc7ec522af07d428de67e05927c6f6f
     GuidInternal: 
-    m_lastTime: -8585538350596850216
+    m_lastTime: -8585538043486593132
     List:
     - name: Exploring
       guid: 046eb251c4e8224a881eb4e6c37b9802
@@ -523,6 +523,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Trigger_Puzzle_Success
+      guid: 8d8500f0a49a724ab0dbc73c5b0f193d
+      id: 67052930
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 8fc7ec522af07d428de67e05927c6f6f
+      - ElementName: Trigger_Puzzle_Success
+        ObjectType: 3
+        guid: 8d8500f0a49a724ab0dbc73c5b0f193d
+      Path: Events\Music\Trigger_Puzzle_Success
+      maxAttenuation: 0
+      maxDuration: 36.871918
+      minDuration: 36.871918
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1028,8 +1045,8 @@ MonoBehaviour:
         ObjectType: 14
         guid: 681b01097e91cc4bbb17657804da8c84
       Path: Triggers\Music\Puzzle_Success
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000500000006000000070000000800000009000000120000001300000014000000150000001600000017000000
+  ExpandedFileSystemItemIds: 0200000004000000
+  ExpandedWaapiItemIds: 020000000400000005000000060000000700000008000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
